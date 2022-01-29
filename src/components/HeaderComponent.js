@@ -1,16 +1,27 @@
 import React from 'react';
-import {Navbar, Container, NavbarBrand} from 'react-bootstrap';
+import {Nav, Navbar, NavbarToggler, Collapse, NavItem, NavLink, NavbarText, 
+  UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarBrand, Container} from 'reactstrap';
 
 const Header = () =>{
 
     return(
-        <>
-        <Navbar bg="darker"  variant="dark">
-    <Container>
-      <NavbarBrand><h1>Game of Life</h1></NavbarBrand>
+        <div>
+       <Navbar
+    color="dark"
+    dark
+    expand="xl"
+  >
+     <Container>
+    <NavbarBrand href="/" className="col-sm-12 offset-md-3">
+      <br/>
+      <h1>Game of Life</h1>
+      <br/>
+    </NavbarBrand>
+    <NavbarToggler onClick={function noRefCheck(){}} />
     </Container>
   </Navbar>
-   </>
+       
+   </div>
    );
 
 }
