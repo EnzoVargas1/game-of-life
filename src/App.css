@@ -44,3 +44,20 @@ body .bg-darker{
 .black{
   color:#000000 !important;
 }
+
+.node {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  outline: 1px solid rgba(144, 175, 175, 0.75);
+  display: inline-block;
+}
+
+.grid {
+  text-align: center;
+}
+
+.flexbox-container {
+  display: flex !important;
+  flex-direction:  row !important;
+}

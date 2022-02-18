@@ -1,6 +1,5 @@
 import React from 'react';
-import {Nav, Navbar, NavbarToggler, Collapse, NavItem, NavLink, NavbarText, 
-  UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarBrand, Container} from 'reactstrap';
+import { Navbar, NavbarBrand, Container, Col} from 'reactstrap';
 
 const Header = () =>{
 
@@ -9,15 +8,17 @@ const Header = () =>{
        <Navbar
     color="dark"
     dark
-    expand="xl"
+    expand="sm"
   >
      <Container>
-    <NavbarBrand href="/" className="col-sm-12 offset-md-3">
-      <br/>
-      <h1>Game of Life</h1>
-      <br/>
+    <Col md={{
+        offset: 4,
+        size: 'auto'
+      }}>
+    <NavbarBrand>
+      <h3>Conway's Game of Life</h3>
     </NavbarBrand>
-    <NavbarToggler onClick={function noRefCheck(){}} />
+    </Col>
     </Container>
   </Navbar>
        

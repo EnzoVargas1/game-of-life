@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent.js';
+import Grid from './GridComponent.js';
+import Cell from './CellComponent.js';
 
 class Main extends Component{
 
@@ -11,6 +13,7 @@ class Main extends Component{
          return(
             <div>
              <Header/>
+             <Grid/>
              </div>
          );
      }
