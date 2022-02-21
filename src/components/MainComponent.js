@@ -39,7 +39,7 @@ class Main extends Component{
        
     }
 
-    updateGrid(i, j){
+    updateGrid = (i, j) => {
         let copy = produce(this.state.grid, copyGrid => {
 
             copyGrid[i][j] = this.state.grid[i][j] == 'black' ? 'green' : 'black';
@@ -49,7 +49,7 @@ class Main extends Component{
         })
     }
 
-    resetGrid(){
+    resetGrid = () => {
         let copy = produce(this.state.grid, copyGrid => {
             for(let i = 0; i < numRows; i++){
                 for(let j = 0; j < numCols; j++){
@@ -101,7 +101,22 @@ class Main extends Component{
      });
      //console.log(this.state.grid);
 
-     setTimeout(this.runSimulation, 1000);
+     setTimeout(this.runSimulation, 500);
+    }
+
+    randomize = () => {
+        let copy = produce(this.state.grid, copyGrid => {
+            let r = Math.random() * ((1 - 0) + 1);
+            for(let i = 0; i < numRows; i++){
+                for(let j = 0; j < numCols; j++){
+                    r = Math.floor(Math.random() * (1 + 1));
+                    copyGrid[i][j] = r == 1 ? "green" : "black";
+                }
+            }
+        });
+        this.setState({
+            grid: copy
+        })
     }
     
     
@@ -126,6 +141,9 @@ class Main extends Component{
 
               <Button style={{backgroundColor: "green"}} color='black' 
               onClick={() => {this.resetGrid()}}>reset</Button>
+
+              <Button style={{backgroundColor: "green"}} color='black' 
+              onClick={() => {this.randomize()}}>Random</Button>
              <br/>
              <br/>
              </div>
