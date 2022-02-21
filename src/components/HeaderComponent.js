@@ -6,7 +6,7 @@ const Header = () =>{
     return(
         <div>
        <Navbar
-    color="dark"
+    color="black"
     dark
     expand="sm"
   >
